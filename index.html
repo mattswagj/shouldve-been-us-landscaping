@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Should've Been Us Landscaping | Premium Design, Hardscapes & Maintenance</title>
+<meta name="description" content="Should've Been Us Landscaping — premium landscape design, hardscapes, and maintenance by Zeke Grabowski. Serving the Black Mountain & Asheville, NC area. DM or call for a free estimate." />
+
+<!--
+  ============================================================
+  SHOULD'VE BEEN US LANDSCAPING — single-file site
+  ------------------------------------------------------------
+  CLIENT TODO before / after go-live (search "CLIENT-TODO"):
+   1. EMAIL: replace the placeholder address in the form's
+      mailto handler + footer (CLIENT-TODO:EMAIL).
+   2. PHOTOS: swap the gallery placeholders for real job
+      photos (CLIENT-TODO:PHOTO). Drop images in /images and
+      set the <img src>. Captions are pre-written to match
+      the work shown on Instagram.
+   3. SERVICE AREA: confirm the towns listed (currently
+      inferred from Black Mountain, NC + the 828 area code).
+   4. REVIEWS: real customer quotes can replace the sample
+      testimonials (CLIENT-TODO:REVIEW) — these are clearly
+      labeled as examples and should NOT go live as-is.
+  ============================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --forest:#1f3a2b;
+    --forest-deep:#16291f;
+    --moss:#2f5d40;
+    --sage:#7c9a78;
+    --sage-soft:#dfe7d8;
+    --clay:#b9764f;
+    --clay-soft:#e9d4c2;
+    --gold:#c9a24b;
+    --cream:#f7f4ec;
+    --cream-2:#efe9dc;
+    --ink:#23271f;
+    --ink-soft:#4d5447;
+    --white:#ffffff;
+    --radius:18px;
+    --radius-lg:28px;
+    --shadow:0 18px 40px -18px rgba(22,41,31,.45);
+    --shadow-soft:0 10px 30px -16px rgba(22,41,31,.4);
+    --maxw:1140px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+  body{
+    font-family:'Manrope',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;line-height:1.1;font-weight:600;color:var(--forest);letter-spacing:-.01em;}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 22px;}
+  section{padding:72px 0;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--clay);margin-bottom:14px;
+  }
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--clay);display:inline-block;border-radius:2px;}
+  .section-head{max-width:620px;margin-bottom:42px;}
+  .section-head h2{font-size:clamp(1.9rem,5vw,2.8rem);}
+  .section-head p{color:var(--ink-soft);font-size:1.05rem;margin-top:14px;}
+
+  /* Buttons */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    font-weight:700;font-size:1rem;padding:15px 26px;border-radius:999px;
+    cursor:pointer;border:none;transition:transform .15s ease,box-shadow .2s ease,background .2s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--clay);color:#fff;box-shadow:var(--shadow-soft);}
+  .btn-primary:hover{transform:translateY(-2px);background:#a9663f;}
+  .btn-ghost{background:transparent;color:var(--forest);border:1.5px solid rgba(31,58,43,.28);}
+  .btn-ghost:hover{background:rgba(31,58,43,.06);transform:translateY(-2px);}
+  .btn-light{background:#fff;color:var(--forest);}
+  .btn-light:hover{transform:translateY(-2px);box-shadow:var(--shadow-soft);}
+  .btn-outline-light{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55);}
+  .btn-outline-light:hover{background:rgba(255,255,255,.12);transform:translateY(-2px);}
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(247,244,236,.86);backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(31,58,43,.08);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px;}
+  .brand{display:flex;align-items:center;gap:11px;font-family:'Fraunces',serif;font-weight:700;color:var(--forest);font-size:1.05rem;line-height:1.05;}
+  .brand .mark{
+    width:38px;height:38px;border-radius:11px;flex:none;
+    background:linear-gradient(145deg,var(--moss),var(--forest));
+    display:grid;place-items:center;color:#fff;font-size:1.05rem;box-shadow:var(--shadow-soft);
+  }
+  .brand small{display:block;font-family:'Manrope',sans-serif;font-weight:600;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--clay);}
+  .nav-links{display:none;align-items:center;gap:30px;}
+  .nav-links a{font-weight:600;font-size:.95rem;color:var(--ink-soft);transition:color .2s;}
+  .nav-links a:hover{color:var(--forest);}
+  .nav-cta{display:none;}
+  @media(min-width:900px){
+    .nav-links{display:flex;}
+    .nav-cta{display:inline-flex;}
+  }
+
+  /* Hero */
+  .hero{
+    position:relative;color:#fff;padding:0;overflow:hidden;
+    background:
+      radial-gradient(120% 90% at 80% 0%,rgba(201,162,75,.18),transparent 55%),
+      linear-gradient(160deg,var(--forest) 0%,var(--forest-deep) 60%,#0f1f17 100%);
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;opacity:.5;pointer-events:none;
+    background-image:
+      radial-gradient(circle at 18% 30%,rgba(124,154,120,.22),transparent 38%),
+      radial-gradient(circle at 88% 75%,rgba(185,118,79,.18),transparent 42%);
+  }
+  .hero-inner{position:relative;z-index:2;display:grid;gap:38px;padding:64px 0 76px;}
+  .hero h1{color:#fff;font-size:clamp(2.4rem,8vw,4.1rem);font-weight:600;}
+  .hero h1 em{font-style:italic;color:var(--gold);}
+  .hero .lede{font-size:1.12rem;color:rgba(255,255,255,.82);max-width:540px;margin-top:18px;}
+  .hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;}
+  .pill{
+    display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:8px 15px;
+    font-size:.85rem;font-weight:600;color:#fff;
+  }
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px;}
+  .hero-trust{display:flex;flex-wrap:wrap;gap:22px;margin-top:38px;padding-top:26px;border-top:1px solid rgba(255,255,255,.14);}
+  .hero-trust div{display:flex;flex-direction:column;}
+  .hero-trust b{font-family:'Fraunces',serif;font-size:1.5rem;color:var(--gold);}
+  .hero-trust span{font-size:.82rem;color:rgba(255,255,255,.7);}
+
+  /* Hero visual */
+  .hero-visual{
+    position:relative;border-radius:var(--radius-lg);overflow:hidden;min-height:300px;
+    box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.14);
+  }
+  .scene{position:absolute;inset:0;}
+  .scene .sky{position:absolute;inset:0;background:linear-gradient(180deg,#bcd6e6,#e7eecb 62%,#cdd9a4);}
+  .scene .sun{position:absolute;top:14%;right:16%;width:70px;height:70px;border-radius:50%;background:radial-gradient(circle,#fff6dc,#f4d98a);filter:blur(.3px);box-shadow:0 0 50px 14px rgba(244,217,138,.55);}
+  .scene .hill{position:absolute;left:-5%;right:-5%;bottom:32%;height:42%;background:linear-gradient(180deg,#7fa05f,#577e44);border-radius:50% 50% 0 0/100% 100% 0 0;}
+  .scene .lawn{position:absolute;left:0;right:0;bottom:0;height:40%;background:linear-gradient(180deg,#6f9a4d,#3f6b32);}
+  .scene .path{position:absolute;bottom:0;left:46%;width:24%;height:40%;background:linear-gradient(180deg,#d8cdb6,#b8a888);transform:perspective(220px) rotateX(52deg);transform-origin:bottom;border-radius:6px;}
+  .scene .bed{position:absolute;bottom:30%;width:24%;height:9%;background:#6b4a32;border-radius:60% 60% 30% 30%;}
+  .scene .bed.l{left:8%;} .scene .bed.r{right:8%;}
+  .scene .shrub{position:absolute;bottom:34%;width:54px;height:54px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#7db066,#3c6b34);box-shadow:var(--shadow-soft);}
+  .scene .shrub.s1{left:11%;} .scene .shrub.s2{left:19%;width:42px;height:42px;bottom:33%;}
+  .scene .shrub.s3{right:11%;} .scene .shrub.s4{right:19%;width:42px;height:42px;bottom:33%;}
+  .scene .house{position:absolute;top:30%;left:50%;transform:translateX(-50%);width:34%;height:26%;background:#ead9c2;border-radius:4px;box-shadow:var(--shadow-soft);}
+  .scene .house::before{content:"";position:absolute;top:-26%;left:-6%;right:-6%;height:30%;background:#7a5640;clip-path:polygon(0 100%,50% 0,100% 100%);}
+  .scene .house::after{content:"";position:absolute;bottom:18%;left:38%;width:24%;height:54%;background:#5b3f2e;border-radius:3px;}
+  .visual-tag{position:absolute;left:14px;bottom:14px;z-index:3;background:rgba(22,41,31,.78);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.04em;padding:7px 12px;border-radius:8px;backdrop-filter:blur(4px);}
+  @media(min-width:980px){
+    .hero-inner{grid-template-columns:1.05fr .95fr;align-items:center;gap:54px;padding:84px 0 96px;}
+    .hero-visual{min-height:440px;}
+  }
+
+  /* Services */
+  .services{background:var(--cream);}
+  .svc-grid{display:grid;gap:20px;grid-template-columns:1fr;}
+  @media(min-width:640px){.svc-grid{grid-template-columns:1fr 1fr;}}
+  @media(min-width:980px){.svc-grid{grid-template-columns:repeat(3,1fr);}}
+  .svc{
+    background:#fff;border:1px solid rgba(31,58,43,.08);border-radius:var(--radius);
+    padding:28px 26px;box-shadow:var(--shadow-soft);position:relative;overflow:hidden;
+    transition:transform .18s ease,box-shadow .2s ease;
+  }
+  .svc:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
+  .svc.feature{background:linear-gradient(160deg,var(--moss),var(--forest));color:#fff;}
+  .svc.feature h3,.svc.feature p{color:#fff;}
+  .svc .ico{
+    width:50px;height:50px;border-radius:13px;display:grid;place-items:center;margin-bottom:18px;
+    background:var(--sage-soft);color:var(--forest);
+  }
+  .svc.feature .ico{background:rgba(255,255,255,.16);color:#fff;}
+  .svc h3{font-size:1.25rem;margin-bottom:8px;}
+  .svc p{color:var(--ink-soft);font-size:.96rem;}
+  .svc.feature p{color:rgba(255,255,255,.85);}
+  .svc .tag{position:absolute;top:16px;right:16px;font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);}
+  .svc-list{margin-top:14px;display:flex;flex-wrap:wrap;gap:7px;}
+  .svc-list span{font-size:.8rem;font-weight:600;background:var(--cream-2);color:var(--ink-soft);padding:5px 11px;border-radius:999px;}
+  .svc.feature .svc-list span{background:rgba(255,255,255,.14);color:#fff;}
+
+  /* Portfolio */
+  .work{background:var(--cream-2);}
+  .gallery{display:grid;gap:16px;grid-template-columns:1fr;}
+  @media(min-width:600px){.gallery{grid-template-columns:1fr 1fr;}}
+  @media(min-width:980px){.gallery{grid-template-columns:repeat(3,1fr);}}
+  .shot{
+    position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;
+    box-shadow:var(--shadow-soft);border:1px solid rgba(31,58,43,.08);background:#cdd6c0;
+  }
+  .shot .ph{position:absolute;inset:0;}
+  .shot .cap{
+    position:absolute;left:0;right:0;bottom:0;z-index:2;padding:30px 16px 14px;color:#fff;
+    background:linear-gradient(180deg,transparent,rgba(15,31,23,.82));font-weight:600;font-size:.95rem;
+    display:flex;align-items:center;justify-content:space-between;gap:8px;
+  }
+  .shot .cap small{font-weight:600;font-size:.7rem;color:rgba(255,255,255,.7);letter-spacing:.06em;text-transform:uppercase;}
+  .ph-note{
+    position:absolute;top:12px;left:12px;z-index:3;background:rgba(255,255,255,.9);color:var(--clay);
+    font-size:.64rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 9px;border-radius:7px;
+  }
+  /* placeholder scenes */
+  .ph-mulch{background:linear-gradient(180deg,#cfe0c0 0 46%,#6b4a32 46% 100%);}
+  .ph-mulch::after{content:"";position:absolute;bottom:8%;left:12%;width:30%;height:34%;border-radius:50%;background:radial-gradient(circle at 40% 35%,#7db066,#3c6b34);}
+  .ph-hard{background:linear-gradient(180deg,#bcd2dd 0 40%,#cabfa6 40% 100%);}
+  .ph-hard::after{content:"";position:absolute;bottom:0;left:50%;transform:translateX(-50%) perspective(200px) rotateX(50deg);width:46%;height:46%;background:repeating-linear-gradient(90deg,#cdbfa3 0 18px,#b6a684 18px 20px),repeating-linear-gradient(0deg,#cdbfa3 0 18px,#b6a684 18px 20px);background-blend-mode:multiply;transform-origin:bottom;border-radius:4px;}
+  .ph-lawn{background:linear-gradient(180deg,#bcd6e6 0 42%,#6f9a4d 42% 100%);}
+  .ph-lawn::after{content:"";position:absolute;top:18%;right:18%;width:46px;height:46px;border-radius:50%;background:radial-gradient(circle,#fff6dc,#f4d98a);box-shadow:0 0 36px 10px rgba(244,217,138,.5);}
+  .ph-plant{background:linear-gradient(180deg,#bcd6e6 0 50%,#7da35a 50% 100%);}
+  .ph-plant::after{content:"";position:absolute;bottom:22%;left:50%;transform:translateX(-50%);width:38%;height:46%;border-radius:50% 50% 46% 46%;background:radial-gradient(circle at 45% 30%,#82b568,#3f6b32);}
+  .ph-path{background:linear-gradient(180deg,#cfe0c0 0 38%,#86a45f 38% 100%);}
+  .ph-path::after{content:"";position:absolute;bottom:0;left:42%;width:22%;height:62%;background:linear-gradient(180deg,#d8cdb6,#b3a382);transform:perspective(200px) rotateX(46deg);transform-origin:bottom;border-radius:5px;}
+  .ph-home{background:linear-gradient(180deg,#bcd6e6 0 36%,#b9a98a 70% 100%,#8a6f4d);}
+  .ph-home::after{content:"";position:absolute;top:30%;left:50%;transform:translateX(-50%);width:50%;height:36%;background:#ead9c2;border-radius:3px;box-shadow:inset 0 -10px 0 #c9b79b;}
+  .ph-home::before{content:"";position:absolute;top:18%;left:50%;transform:translateX(-50%);width:58%;height:16%;background:#7a5640;clip-path:polygon(0 100%,50% 0,100% 100%);z-index:1;}
+
+  /* About */
+  .about-grid{display:grid;gap:36px;align-items:center;}
+  @media(min-width:900px){.about-grid{grid-template-columns:0.85fr 1.15fr;}}
+  .about-card{
+    position:relative;border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/5;
+    background:linear-gradient(160deg,var(--moss),var(--forest-deep));box-shadow:var(--shadow);
+    display:grid;place-items:center;color:#fff;text-align:center;padding:30px;
+  }
+  .about-card .ring{width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.3);display:grid;place-items:center;font-family:'Fraunces',serif;font-size:2.6rem;margin-bottom:18px;}
+  .about-card h3{color:#fff;font-size:1.5rem;}
+  .about-card .role{color:var(--gold);font-weight:600;font-size:.9rem;letter-spacing:.05em;margin-top:4px;}
+  .about-card .ph-note{top:12px;right:12px;left:auto;}
+  .about-body p{color:var(--ink-soft);font-size:1.05rem;margin-bottom:16px;}
+  .about-body p strong{color:var(--forest);}
+  .about-facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;}
+  .about-facts span{background:#fff;border:1px solid rgba(31,58,43,.1);border-radius:999px;padding:8px 14px;font-size:.85rem;font-weight:600;color:var(--forest);box-shadow:var(--shadow-soft);}
+
+  /* Why */
+  .why{background:var(--forest);color:#fff;}
+  .why .section-head h2{color:#fff;}
+  .why .section-head p{color:rgba(255,255,255,.78);}
+  .why-grid{display:grid;gap:18px;grid-template-columns:1fr;}
+  @media(min-width:640px){.why-grid{grid-template-columns:1fr 1fr;}}
+  @media(min-width:980px){.why-grid{grid-template-columns:repeat(4,1fr);}}
+  .why-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:24px;}
+  .why-card .n{font-family:'Fraunces',serif;font-size:1.6rem;color:var(--gold);margin-bottom:10px;}
+  .why-card h4{color:#fff;font-size:1.08rem;margin-bottom:6px;}
+  .why-card p{color:rgba(255,255,255,.75);font-size:.9rem;}
+
+  /* Area */
+  .area-grid{display:grid;gap:34px;align-items:center;}
+  @media(min-width:900px){.area-grid{grid-template-columns:1fr 1fr;}}
+  .area-towns{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;}
+  .area-towns span{background:var(--sage-soft);color:var(--forest);font-weight:600;font-size:.9rem;padding:9px 15px;border-radius:999px;}
+  .area-map{position:relative;border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:16/11;background:linear-gradient(160deg,#dfe7d8,#c7d6bf);box-shadow:var(--shadow-soft);border:1px solid rgba(31,58,43,.08);}
+  .area-map .blob{position:absolute;border-radius:50%;background:rgba(47,93,64,.16);}
+  .area-map .pin{position:absolute;top:46%;left:48%;width:18px;height:18px;background:var(--clay);border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 0 0 8px rgba(185,118,79,.22);}
+  .area-map .roads{position:absolute;inset:0;background-image:linear-gradient(90deg,transparent 49%,rgba(255,255,255,.6) 50%,transparent 51%),linear-gradient(0deg,transparent 49%,rgba(255,255,255,.45) 50%,transparent 51%);background-size:80px 80px;opacity:.5;}
+  .area-map .label{position:absolute;bottom:14px;left:14px;background:rgba(255,255,255,.9);color:var(--forest);font-weight:700;font-size:.78rem;padding:7px 12px;border-radius:8px;}
+
+  /* Reviews */
+  .reviews{background:var(--cream-2);}
+  .rev-grid{display:grid;gap:18px;grid-template-columns:1fr;}
+  @media(min-width:760px){.rev-grid{grid-template-columns:repeat(3,1fr);}}
+  .rev{background:#fff;border:1px solid rgba(31,58,43,.08);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow-soft);position:relative;}
+  .rev .stars{color:var(--gold);font-size:1rem;letter-spacing:2px;margin-bottom:12px;}
+  .rev p{font-size:.98rem;color:var(--ink);font-style:italic;}
+  .rev .who{margin-top:16px;font-weight:700;color:var(--forest);font-size:.9rem;}
+  .rev .who small{display:block;font-weight:500;color:var(--ink-soft);font-style:normal;}
+  .rev-flag{text-align:center;color:var(--ink-soft);font-size:.85rem;margin-top:20px;}
+
+  /* Contact */
+  .contact{background:linear-gradient(160deg,var(--forest) 0%,var(--forest-deep) 100%);color:#fff;}
+  .contact .section-head h2{color:#fff;}
+  .contact .section-head p{color:rgba(255,255,255,.8);}
+  .contact-grid{display:grid;gap:32px;}
+  @media(min-width:920px){.contact-grid{grid-template-columns:1fr 1.1fr;}}
+  .contact-ways{display:flex;flex-direction:column;gap:14px;}
+  .cway{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:18px 20px;transition:background .2s,transform .15s;}
+  .cway:hover{background:rgba(255,255,255,.11);transform:translateY(-2px);}
+  .cway .ico{width:46px;height:46px;border-radius:12px;background:rgba(201,162,75,.2);display:grid;place-items:center;flex:none;color:var(--gold);}
+  .cway b{display:block;font-size:1.05rem;color:#fff;}
+  .cway span{font-size:.85rem;color:rgba(255,255,255,.7);}
+  form{background:#fff;border-radius:var(--radius-lg);padding:28px 24px;box-shadow:var(--shadow);}
+  form h3{font-size:1.35rem;margin-bottom:4px;}
+  form .sub{color:var(--ink-soft);font-size:.92rem;margin-bottom:20px;}
+  .field{margin-bottom:15px;}
+  .field label{display:block;font-size:.82rem;font-weight:700;color:var(--forest);margin-bottom:6px;}
+  .field input,.field select,.field textarea{
+    width:100%;font-family:inherit;font-size:1rem;color:var(--ink);
+    border:1.5px solid rgba(31,58,43,.16);border-radius:12px;padding:12px 14px;background:var(--cream);
+    transition:border-color .15s,box-shadow .15s;
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--moss);box-shadow:0 0 0 3px rgba(47,93,64,.14);}
+  .field textarea{resize:vertical;min-height:96px;}
+  .row2{display:grid;gap:15px;}
+  @media(min-width:520px){.row2{grid-template-columns:1fr 1fr;}}
+  form .btn{width:100%;margin-top:6px;}
+  .form-note{font-size:.78rem;color:var(--ink-soft);text-align:center;margin-top:12px;}
+
+  /* Footer */
+  footer{background:var(--forest-deep);color:rgba(255,255,255,.7);padding:46px 0 30px;}
+  .foot-top{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-start;padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,.1);}
+  .foot-brand{display:flex;align-items:center;gap:12px;color:#fff;font-family:'Fraunces',serif;font-size:1.15rem;}
+  .foot-links{display:flex;flex-wrap:wrap;gap:18px;}
+  .foot-links a{font-size:.9rem;font-weight:600;color:rgba(255,255,255,.78);}
+  .foot-links a:hover{color:#fff;}
+  .foot-bottom{margin-top:22px;font-size:.8rem;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;}
+  .foot-bottom a{color:var(--gold);}
+
+  /* sticky mobile call bar */
+  .callbar{
+    position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;gap:10px;padding:10px 14px;
+    background:rgba(22,41,31,.94);backdrop-filter:blur(8px);border-top:1px solid rgba(255,255,255,.1);
+  }
+  .callbar .btn{flex:1;padding:13px;font-size:.95rem;}
+  @media(min-width:900px){.callbar{display:none;}}
+  body{padding-bottom:72px;}
+  @media(min-width:900px){body{padding-bottom:0;}}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Should've Been Us Landscaping home">
+      <span class="mark">🌿</span>
+      <span>Should've Been Us<small>Landscaping &amp; Design</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#work">Our Work</a>
+      <a href="#about">About</a>
+      <a href="#area">Service Area</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-primary nav-cta" href="#contact">Free Estimate</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap hero-inner">
+    <div>
+      <span class="eyebrow">Black Mountain &amp; Asheville, NC</span>
+      <h1>Your yard, the way it <em>should've been</em>.</h1>
+      <p class="lede">Premium landscape design, hardscapes, and reliable maintenance — done with the kind of pride and detail most crews skip. Locally owned by Zeke Grabowski.</p>
+      <div class="hero-badges">
+        <span class="pill">✦ Premium Design</span>
+        <span class="pill">⬡ Hardscapes</span>
+        <span class="pill">✂ Maintenance</span>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#contact">Get a Free Estimate</a>
+        <a class="btn btn-outline-light" href="tel:+18289891862">📞 (828) 989-1862</a>
+      </div>
+      <div class="hero-trust">
+        <div><b>Local</b><span>Owner-operated in WNC</span></div>
+        <div><b>Free</b><span>No-cost estimates</span></div>
+        <div><b>Detail</b><span>Premium finish, every job</span></div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <!-- CLIENT-TODO:PHOTO — replace this illustrated scene with a wide hero photo of finished work -->
+      <div class="scene">
+        <div class="sky"></div><div class="sun"></div>
+        <div class="hill"></div>
+        <div class="house"></div>
+        <div class="lawn"></div>
+        <div class="bed l"></div><div class="bed r"></div>
+        <div class="shrub s1"></div><div class="shrub s2"></div>
+        <div class="shrub s3"></div><div class="shrub s4"></div>
+        <div class="path"></div>
+      </div>
+      <span class="visual-tag">Illustration — swap for a real job photo</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">What we do</span>
+      <h2>Full-service landscaping &amp; design</h2>
+      <p>From the first design sketch to weekly upkeep, Should've Been Us handles the whole yard — so it looks great the day we finish and stays that way.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc feature">
+        <span class="tag">Signature</span>
+        <div class="ico">✦</div>
+        <h3>Premium Design</h3>
+        <p>Custom landscape design built around your home and how you actually use the space — beds, layout, plant selection, and curb appeal.</p>
+        <div class="svc-list"><span>Design &amp; layout</span><span>Curb appeal</span><span>Plant selection</span></div>
+      </div>
+      <div class="svc">
+        <div class="ico">⬡</div>
+        <h3>Hardscapes</h3>
+        <p>Walkways, gravel paths, stone, edging, and the structural features that give a yard its shape and stand up for years.</p>
+        <div class="svc-list"><span>Walkways &amp; paths</span><span>Stone work</span><span>Edging</span></div>
+      </div>
+      <div class="svc">
+        <div class="ico">✂</div>
+        <h3>Maintenance</h3>
+        <p>Keep it sharp year-round with dependable upkeep and seasonal touch-ups — mowing, trimming, and clean-ups on a schedule that works for you.</p>
+        <div class="svc-list"><span>Mowing &amp; edging</span><span>Shrub trimming</span><span>Seasonal clean-ups</span></div>
+      </div>
+      <div class="svc">
+        <div class="ico">🪴</div>
+        <h3>Mulch &amp; Beds</h3>
+        <p>Fresh mulch beds and clean borders that make plantings pop and keep weeds down — one of the fastest ways to lift a property.</p>
+      </div>
+      <div class="svc">
+        <div class="ico">🌱</div>
+        <h3>Planting</h3>
+        <p>Shrubs, trees, and seasonal plantings chosen to thrive in Western North Carolina and placed for the look you want.</p>
+      </div>
+      <div class="svc">
+        <div class="ico">🌿</div>
+        <h3>Lawn Care</h3>
+        <p>Healthy, even, well-kept lawns — mowing, edging, and the regular care that keeps grass green through the season.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK / PORTFOLIO -->
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Our work</span>
+      <h2>Recent projects</h2>
+      <p>A look at the kind of results we deliver. The images below are placeholders styled to match real jobs from our Instagram — swap in your photos before launch.</p>
+    </div>
+    <div class="gallery">
+      <!-- CLIENT-TODO:PHOTO — replace each placeholder .ph div with <img src="images/your-photo.jpg" alt="..."> -->
+      <div class="shot"><div class="ph ph-path"></div><span class="ph-note">Placeholder</span><div class="cap"><span>Gravel walkway &amp; border</span><small>Hardscape</small></div></div>
+      <div class="shot"><div class="ph ph-home"></div><span class="ph-note">Placeholder</span><div class="cap"><span>Finished home exterior</span><small>Full project</small></div></div>
+      <div class="shot"><div class="ph ph-mulch"></div><span class="ph-note">Placeholder</span><div class="cap"><span>Fresh mulch beds</span><small>Beds</small></div></div>
+      <div class="shot"><div class="ph ph-hard"></div><span class="ph-note">Placeholder</span><div class="cap"><span>Stone &amp; paver detail</span><small>Hardscape</small></div></div>
+      <div class="shot"><div class="ph ph-plant"></div><span class="ph-note">Placeholder</span><div class="cap"><span>New shrub planting</span><small>Planting</small></div></div>
+      <div class="shot"><div class="ph ph-lawn"></div><span class="ph-note">Placeholder</span><div class="cap"><span>Clean, even lawn</span><small>Maintenance</small></div></div>
+    </div>
+    <div style="text-align:center;margin-top:30px;">
+      <a class="btn btn-ghost" href="https://www.instagram.com/shouldvebeenusllc/" target="_blank" rel="noopener">See more on Instagram →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-card">
+      <!-- CLIENT-TODO:PHOTO — replace with a photo of Zeke on a job site -->
+      <span class="ph-note">Add photo</span>
+      <div>
+        <div class="ring">ZG</div>
+        <h3>Zeke Grabowski</h3>
+        <div class="role">Owner &amp; Operator</div>
+      </div>
+    </div>
+    <div class="about-body">
+      <span class="eyebrow">About</span>
+      <h2 style="font-size:clamp(1.8rem,5vw,2.6rem);margin-bottom:18px;">Local, hands-on, and proud of the result</h2>
+      <p><strong>Should've Been Us Landscaping is owned and run by Zeke Grabowski</strong> — a Black Mountain native who brings the same work ethic to every yard that he brings to the mat as a college wrestler.</p>
+      <p>A senior at <strong>Montreat College</strong> ('26), Zeke built this business on a simple idea: most yards could look a whole lot better with someone who actually cares about the details. Every job gets a premium finish — clean lines, healthy plantings, and a property you're proud to come home to.</p>
+      <p>When you hire Should've Been Us, you're working directly with the owner. No call centers, no rotating crews — just straight answers, fair estimates, and work that holds up.</p>
+      <div class="about-facts">
+        <span>📍 Black Mountain, NC</span>
+        <span>🎓 Montreat College '26</span>
+        <span>🤼 Collegiate wrestler</span>
+        <span>🤝 Owner-operated</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Why choose us</span>
+      <h2>The difference is in the details</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card"><div class="n">01</div><h4>Premium finish</h4><p>Clean edges, level surfaces, and a tidy site — we sweat the small stuff that makes a yard look professional.</p></div>
+      <div class="why-card"><div class="n">02</div><h4>Owner on site</h4><p>You deal with Zeke directly from estimate to final walk-through. Accountability you can actually reach.</p></div>
+      <div class="why-card"><div class="n">03</div><h4>Local &amp; reliable</h4><p>Based right here in Western NC. We show up when we say we will and stand behind the work.</p></div>
+      <div class="why-card"><div class="n">04</div><h4>Free estimates</h4><p>No-pressure, no-cost quotes. Tell us the vision and we'll give you an honest plan and price.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="area" id="area">
+  <div class="wrap area-grid">
+    <div>
+      <span class="eyebrow">Service area</span>
+      <h2 style="font-size:clamp(1.8rem,5vw,2.6rem);margin-bottom:14px;">Serving Western North Carolina</h2>
+      <p style="color:var(--ink-soft);font-size:1.05rem;">Based in the Black Mountain area and serving surrounding communities in the Asheville region. Not sure if you're in range? Just ask — we're happy to take a look.</p>
+      <div class="area-towns">
+        <span>Black Mountain</span>
+        <span>Montreat</span>
+        <span>Swannanoa</span>
+        <span>Asheville</span>
+        <span>Fairview</span>
+        <span>Old Fort</span>
+      </div>
+      <p style="color:var(--ink-soft);font-size:.82rem;margin-top:16px;font-style:italic;">Towns above are a starting estimate based on the business's home base — confirm exact coverage before launch.</p>
+    </div>
+    <div class="area-map" aria-hidden="true">
+      <div class="roads"></div>
+      <div class="blob" style="width:55%;height:55%;top:10%;left:8%;"></div>
+      <div class="blob" style="width:40%;height:40%;bottom:8%;right:12%;"></div>
+      <div class="pin"></div>
+      <span class="label">📍 Black Mountain, NC</span>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Kind words</span>
+      <h2>What clients say</h2>
+      <p>Sample testimonials shown for layout. Replace with real customer reviews before publishing.</p>
+    </div>
+    <div class="rev-grid">
+      <!-- CLIENT-TODO:REVIEW — example copy only; do not publish as real -->
+      <div class="rev"><div class="stars">★★★★★</div><p>“Sample review — Zeke transformed our front beds and the new walkway looks incredible. Showed up on time and left the place spotless.”</p><div class="who">— Sample Customer<small>Black Mountain, NC</small></div></div>
+      <div class="rev"><div class="stars">★★★★★</div><p>“Sample review — Fair price, great communication, and the quality blew us away. Highly recommend for anyone wanting it done right.”</p><div class="who">— Sample Customer<small>Asheville, NC</small></div></div>
+      <div class="rev"><div class="stars">★★★★★</div><p>“Sample review — Our yard has never looked better. You can tell he genuinely takes pride in the work.”</p><div class="who">— Sample Customer<small>Swannanoa, NC</small></div></div>
+    </div>
+    <p class="rev-flag">⚠ Placeholder testimonials — swap in real reviews (or remove this section) before going live.</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Get started</span>
+      <h2>Request your free estimate</h2>
+      <p>Call, DM, or send the form below. Tell us a little about your project and we'll get right back to you.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-ways">
+        <a class="cway" href="tel:+18289891862">
+          <span class="ico">📞</span>
+          <span><b>(828) 989-1862</b><span>Call or text — fastest way to reach us</span></span>
+        </a>
+        <a class="cway" href="https://www.instagram.com/shouldvebeenusllc/" target="_blank" rel="noopener">
+          <span class="ico">📷</span>
+          <span><b>@shouldvebeenusllc</b><span>DM us on Instagram for a free estimate</span></span>
+        </a>
+        <a class="cway" href="#contact" id="emailWay">
+          <span class="ico">✉️</span>
+          <span><b>Email us</b><span>Use the form — opens your mail app</span></span>
+        </a>
+        <div class="cway" style="cursor:default;">
+          <span class="ico">⏱</span>
+          <span><b>Quick turnaround</b><span>Free, no-pressure quotes</span></span>
+        </div>
+      </div>
+
+      <!-- mailto form: NO backend / NO Supabase. Submitting opens the user's email app. -->
+      <form id="estimateForm">
+        <h3>Tell us about your project</h3>
+        <p class="sub">Fields marked * are required.</p>
+        <div class="row2">
+          <div class="field"><label for="name">Name *</label><input id="name" name="name" required placeholder="Your name" /></div>
+          <div class="field"><label for="phone">Phone *</label><input id="phone" name="phone" type="tel" required placeholder="(828) 555-0123" /></div>
+        </div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@email.com" /></div>
+        <div class="field">
+          <label for="service">What do you need? *</label>
+          <select id="service" name="service" required>
+            <option value="" disabled selected>Choose a service…</option>
+            <option>Landscape Design</option>
+            <option>Hardscapes (walkway / stone / edging)</option>
+            <option>Maintenance (mowing / trimming)</option>
+            <option>Mulch &amp; beds</option>
+            <option>Planting</option>
+            <option>Lawn care</option>
+            <option>Other / not sure</option>
+          </select>
+        </div>
+        <div class="field"><label for="details">Project details</label><textarea id="details" name="details" placeholder="Address or area, what you're hoping for, timeline, etc."></textarea></div>
+        <button class="btn btn-primary" type="submit">Send my estimate request</button>
+        <p class="form-note">Prefer to talk? Call or text <a href="tel:+18289891862" style="color:var(--clay);font-weight:700;">(828) 989-1862</a>.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand"><span class="mark" style="width:34px;height:34px;border-radius:10px;background:linear-gradient(145deg,var(--moss),var(--forest));display:grid;place-items:center;">🌿</span> Should've Been Us Landscaping</div>
+        <p style="margin-top:10px;max-width:320px;font-size:.9rem;">Premium landscape design, hardscapes &amp; maintenance. Owner-operated by Zeke Grabowski in Western North Carolina.</p>
+      </div>
+      <div class="foot-links">
+        <a href="#services">Services</a>
+        <a href="#work">Our Work</a>
+        <a href="#about">About</a>
+        <a href="#area">Service Area</a>
+        <a href="tel:+18289891862">(828) 989-1862</a>
+        <a href="https://www.instagram.com/shouldvebeenusllc/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr"></span> Should've Been Us Landscaping. All rights reserved.</span>
+      <span>Free estimates · <a href="#contact">Get in touch</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE CALL BAR -->
+<div class="callbar">
+  <a class="btn btn-primary" href="tel:+18289891862">📞 Call</a>
+  <a class="btn btn-light" href="#contact">Free Estimate</a>
+</div>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // mailto form handler — no backend. Opens the visitor's email client.
+  // CLIENT-TODO:EMAIL — replace the address below with the business email.
+  var BUSINESS_EMAIL = "REPLACE_WITH_YOUR_EMAIL@example.com";
+
+  document.getElementById('estimateForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var f = e.target;
+    var name = f.name.value.trim();
+    var phone = f.phone.value.trim();
+    var email = f.email.value.trim();
+    var service = f.service.value;
+    var details = f.details.value.trim();
+
+    var subject = "Estimate request — " + (service || "Landscaping") + " (" + name + ")";
+    var body =
+      "Name: " + name + "\n" +
+      "Phone: " + phone + "\n" +
+      "Email: " + (email || "—") + "\n" +
+      "Service: " + service + "\n\n" +
+      "Details:\n" + (details || "—") + "\n";
+
+    window.location.href = "mailto:" + BUSINESS_EMAIL +
+      "?subject=" + encodeURIComponent(subject) +
+      "&body=" + encodeURIComponent(body);
+  });
+</script>
+</body>
+</html>
